@@ -2,7 +2,7 @@
 import express  from 'express'
 
 
-console.log('hola mundo')
+console.log('cada vez que hay un cambio se ejecuta nodemon')
 
 //configuar puerto 
 
