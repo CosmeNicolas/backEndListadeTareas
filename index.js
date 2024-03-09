@@ -2,10 +2,13 @@
 import express  from 'express'
 
 
-console.log('cada vez que hay un cambio se ejecuta nodemon')
 
 //configuar puerto 
-
+ const app = express();
+ app.set('port', process.env.PORT || 4000);
+ app.listen(app.get('port'),()=>{
+    console.log('estoy en el puerto' + app.get('port'))
+ })
 //config middleware
 
 //config  rutas 
