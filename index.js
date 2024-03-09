@@ -1,5 +1,4 @@
-console.log('desde el index.js')
-console.log('segundo argunmento')
+console.log('hola mundo')
 
 //configuar puerto 
 
