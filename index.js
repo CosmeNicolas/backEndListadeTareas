@@ -1,11 +1,12 @@
 //importamos express 
-import express, { urlencoded }  from 'express'
+import express from 'express'
 import 'dotenv/config'
 import cors from 'cors'
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import listarTareas from './src/routes/tareas.routes.js';
+import './src/database/database.js'
 
 
 //configuar puerto 
