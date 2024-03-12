@@ -5,6 +5,7 @@ import cors from 'cors'
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import listarTareas from './src/routes/tareas.routes.js';
 
 
 //configuar puerto 
@@ -24,10 +25,14 @@ app.use(express.static(path.join(__dirname,'/public')))
 
 
 //config  rutas , http://localhost:3000/productos
-app.get('/nuevo', (req, res)=>{
+app.use('/api', listarTareas) 
+
+
+
+/* app.get('/nuevo', (req, res)=>{
     console.log('procesando respuesta')
     res.send('respuesta del back de tareas ')
 });
-
+ */
  
 
