@@ -20,3 +20,16 @@ export const  crearTarea = async(req, res)=>{
         res.status(400).json({mensaje: 'La tarea no  fue creada'})
     }
 }
+
+export const obtenerTarea = async(req, res)=>{
+    try {
+        const tareaBuscada = await Tarea.findById(req.params.id)
+        if(!tareaBuscada){
+            return res.status(404).json({mensaje: 'No se encontro la tarea con el id enviado'})
+        }
+        res.status(200).json(tareaBuscada)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({mensaje: 'No se encontro la tarea'})
+    }
+}
