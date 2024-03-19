@@ -47,3 +47,17 @@ export const editarTarea = async (req, res)=>{
         res.status(500).json({memsaje:'error interno en la solicitud, no se edito el producto' })
     }
 }
+
+export const borrarTarea = async(req, res)=>{
+    try {
+        const tareaBuscada = await Tarea.findById(req.params.id)
+        if(!tareaBuscada){
+            return res.status(404).json({mensaje:'No se Borro la receta'})
+        }
+        await Tarea.findByIdAndDelete(req.params.id)
+        res.status(200).json({mensaje:'Tarea borrada exitosamente'})
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({mensaje:'Error interno en la solicitud, no se elimino la tarea'})
+    }
+}
