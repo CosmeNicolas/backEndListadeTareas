@@ -33,3 +33,17 @@ export const obtenerTarea = async(req, res)=>{
         res.status(500).json({mensaje: 'No se encontro la tarea'})
     }
 }
+
+export const editarTarea = async (req, res)=>{
+    try {
+        const tareaBuscada = await Tarea.findById(req.params.id)
+        if(!tareaBuscada){
+            return res.status(404).json({mensaje:'No se encontro la receta que queremos editar'})
+        }
+        await Tarea.findByIdAndUpdate(req.params.id, req.body)
+        res.status(200).json({mensaje:'Tarea editada con éxito'})
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({memsaje:'error interno en la solicitud, no se edito el producto' })
+    }
+}
