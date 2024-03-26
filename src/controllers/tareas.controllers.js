@@ -3,10 +3,10 @@ import Tarea from "../database/models/tarea.js"
 export const listarTareas = async(req, res)=>{
     try {
         const tareas = await Tarea.find()
-        res.status(200).json({mensaje: tareas})
+        res.status(200).json(tareas)
     } catch (error) {
         console.log(error)
-        res.tatus(500).json({mensaje: 'Error al buscar tareas'})
+        res.status(500).json({mensaje: 'Error al buscar tareas'})
     }
 }
 

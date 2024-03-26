@@ -9,5 +9,5 @@ mongoose.connect(mongoURI)
 const datosConexion = mongoose.connection;
 
 datosConexion.once('open',()=>{
-    console.log('base de datos conectada')
+    console.log('base de datos conectada listaTareas')
 })
