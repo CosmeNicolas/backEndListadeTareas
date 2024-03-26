@@ -1,4 +1,4 @@
-# Backend Lista de Tareas
+# Backend Lista de Tareas 📝
 
 Este es el backend de una aplicación de lista de tareas desarrollada con MongoDB, Express y Node.js.
 
