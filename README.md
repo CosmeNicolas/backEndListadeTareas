@@ -35,7 +35,7 @@ Para ejecutar el proyecto, puedes usar el siguiente comando:
 
 npm run dev 
 
-Esto iniciará el servidor en el puerto especificado en las variables de entorno (`PORT`). Por defecto, el servidor se ejecutará en el puerto 3000.
+Esto iniciará el servidor en el puerto especificado en las variables de entorno (`PORT`). Por defecto, el servidor se ejecutará en el puerto 4004.
 
 ## API Endpoints
 
